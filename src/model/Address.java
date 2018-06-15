@@ -14,6 +14,16 @@ public class Address {
 
 	private String country;
 
+	public Address(Integer unitNo, String streetName, String city, String province, String postalCode, String country) {
+		super();
+		this.unitNo = unitNo;
+		this.streetName = streetName;
+		this.city = city;
+		this.province = province;
+		this.postalCode = postalCode;
+		this.country = country;
+	}
+
 	public Integer getUnitNo() {
 		return unitNo;
 	}

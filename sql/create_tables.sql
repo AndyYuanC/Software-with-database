@@ -3,7 +3,7 @@ create table address
 street_name 	varchar2(30),
 city 			varchar2(20),
 province 		varchar2(20),
-postal_code 	varchar2(6) not null,
+postal_code 	varchar2(6),
 country			varchar2(20),
 PRIMARY KEY (unit_no, street_name, city));
 
