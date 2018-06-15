@@ -7,7 +7,9 @@ import javax.swing.JFrame;
 import app.DbConnection;
 
 public class ShippingApplication {
+
 	private JFrame mainFrame;
+
 	private Connection con;
 
 	public ShippingApplication() {
