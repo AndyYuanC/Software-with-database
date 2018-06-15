@@ -10,6 +10,14 @@ public class Lives {
 
 	private String customerId;
 
+	public Lives(Integer unitNo, String streetName, String city, String customerId) {
+		super();
+		this.unitNo = unitNo;
+		this.streetName = streetName;
+		this.city = city;
+		this.customerId = customerId;
+	}
+
 	public Integer getUnitNo() {
 		return unitNo;
 	}

@@ -69,7 +69,7 @@ foreign key 	(order_no) REFERENCES order_delivers (order_no) ON DELETE CASCADE);
 create table payment_requires
 ( receipt_no 	integer PRIMARY KEY,
 price 			float(2),
-due_date 		date,
+payment_date 	date,
 payment_method 	varchar2(10),
 order_no 		integer not null unique,
 foreign key 	(order_no) references order_delivers (order_no) ON DELETE CASCADE);
