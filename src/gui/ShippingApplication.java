@@ -3,11 +3,14 @@ package gui;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import app.ParcelOwnsSql;
 
 public class ShippingApplication extends JFrame {
 
@@ -49,6 +52,7 @@ public class ShippingApplication extends JFrame {
 		JButton query10 = new JButton("Find Customer With All Addresses");
 		query1.addActionListener(new FindOrder());
 		query2.addActionListener(new FindDeliveryMan());
+		query10.addActionListener(new CustomerWithAllAddress());
 		mainPanel.add(customer);
 		mainPanel.add(l1);
 		mainPanel.add(l2);
@@ -72,6 +76,12 @@ public class ShippingApplication extends JFrame {
 
 	public static void main(String args[]) {
 		new ShippingApplication();
+		try {
+			ParcelOwnsSql.findMaxWeight();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
