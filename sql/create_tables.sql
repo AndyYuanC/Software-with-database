@@ -11,7 +11,7 @@ create table customer
 ( customer_id 	integer PRIMARY KEY,
 customer_name 	varchar2(20),
 customer_phone 	varchar2(12),
-customer_gender varchar2(6) check (customer_gender = 'MALE','FEMALE','Male','Female','male','female'),
+customer_gender varchar2(6) CHECK (customer_gender IN ('MALE','FEMALE','Male','Female','male','female')),
 customer_birthdate date );
 
 create table lives
