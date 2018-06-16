@@ -8,10 +8,10 @@ country			varchar2(20),
 PRIMARY KEY (unit_no, street_name, city));
 
 create table customer
-( customer_id 	integer not null PRIMARY KEY,
+( customer_id 	integer PRIMARY KEY,
 customer_name 	varchar2(20),
-customer_phone 	varchar2(12) not null,
-customer_gender varchar2(6),
+customer_phone 	varchar2(12),
+customer_gender varchar2(6) check (customer_gender = 'MALE','FEMALE','Male','Female','male','female'),
 customer_birthdate date );
 
 create table lives
@@ -23,7 +23,6 @@ PRIMARY KEY (unit_no, street_name, city, customer_id),
 foreign key (unit_no, street_name, city) references address (unit_no, street_name, city) ON DELETE CASCADE,
 foreign key (customer_id) references customer (customer_id) ON DELETE CASCADE);
 
-
 create table parcel_owns
 ( weight 		float(3),
 volume 			integer,
@@ -31,7 +30,6 @@ description 	varchar2(32),
 customer_id 	integer not null,
 PRIMARY KEY 	(description, customer_id),
 foreign key 	(customer_id) references customer (customer_id) ON DELETE CASCADE );
-
 
 create table branch
 ( branch_id 	integer PRIMARY KEY,
@@ -53,7 +51,7 @@ create table order_delivers
 delivery_method varchar2(20),
 receiver 		varchar2(20),
 start_date		date,
-due_date 		date,
+delivery_days 	integer,
 address 		varchar2(30),
 employee_id 	integer not null,
 foreign key 	(employee_id) references employee_works (employee_id) ON DELETE CASCADE );
