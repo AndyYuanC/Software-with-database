@@ -10,7 +10,7 @@ PRIMARY KEY (unit_no, street_name, city));
 create table customer
 ( customer_id 	integer PRIMARY KEY,
 customer_name 	varchar2(20),
-customer_phone 	varchar2(12),
+customer_phone 	varchar2(14),
 customer_gender varchar2(6) CHECK (customer_gender IN ('MALE','FEMALE','Male','Female','male','female')),
 customer_birthdate date );
 
@@ -26,7 +26,7 @@ foreign key (customer_id) references customer (customer_id) ON DELETE CASCADE);
 create table parcel_owns
 ( weight 		float(3),
 volume 			integer,
-description 	varchar2(32),
+description 	varchar2(50),
 customer_id 	integer not null,
 PRIMARY KEY 	(description, customer_id),
 foreign key 	(customer_id) references customer (customer_id) ON DELETE CASCADE );
@@ -57,7 +57,7 @@ employee_id 	integer not null,
 foreign key 	(employee_id) references employee_works (employee_id) ON DELETE CASCADE );
 
 create table contains
-( description 	varchar2(32),
+( description 	varchar2(50),
 customer_id 	integer,
 order_no 		integer,
 PRIMARY KEY 	(description, customer_id, order_no),
