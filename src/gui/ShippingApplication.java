@@ -12,9 +12,7 @@ import javax.swing.JPanel;
 
 import app.DbConnection;
 
-public class ShippingApplication {
-
-	private JFrame mainFrame;
+public class ShippingApplication extends JFrame{
 
 	private Connection con;
 	
@@ -24,13 +22,13 @@ public class ShippingApplication {
 
 	public ShippingApplication() {
 		con = DbConnection.getInstance().getConnection();
-		mainFrame = new JFrame("UBCD Shipping Company");
-		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		mainFrame.setVisible(true);
+		setTitle("UBC Delivery");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
 		JPanel mainPanel = createMainPanel();
-		mainFrame.add(mainPanel);
-		mainFrame.setSize(new Dimension(width,height));
-		mainFrame.setResizable(false);
+		add(mainPanel);
+		setSize(new Dimension(width,height));
+		setResizable(false);
 		DbConnection.closeConnection();
 	}
 	
@@ -57,6 +55,7 @@ public class ShippingApplication {
 		JButton query8 = new JButton("Find Min Date For Specific Delivery Method");
 		JButton query9 = new JButton("Find Max Date For Specific Delivery Method");
 		JButton query10 = new JButton("Find Customer With All Addresses");
+		query1.addActionListener(new FindOrder());
 		mainPanel.add(customer);
 		mainPanel.add(l1);
 		mainPanel.add(l2);
@@ -75,9 +74,12 @@ public class ShippingApplication {
 		mainPanel.add(query9);
 		mainPanel.add(query10);
 		return mainPanel;
+		
+		
 	}
 
 	public static void main(String args[]) {
 		new ShippingApplication();
 	}
+
 }
