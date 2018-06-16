@@ -36,11 +36,11 @@ public class OrderSql {
 		List<OrderDelivers> queryResults = new ArrayList<>();
 		try {
 			stmt = con.createStatement();
-			String sql = "SELECT *" + " FROM order_delivers "
+			String sql = "SELECT order_no, delivery_method, start_date, delivery_days" + " FROM order_delivers "
 					+ MessageFormat.format("WHERE order_no = {0,number,#}", orderId);
 			ResultSet rs = stmt.executeQuery(sql);
 			while (rs.next()) {
-				queryResults.add(createOrderDelivers(rs));
+				queryResults.add(createProjectionOrderDelivers(rs));
 			}
 		} catch (SQLException e) {
 			System.out.println("Message: " + e.getMessage());
@@ -66,6 +66,15 @@ public class OrderSql {
 
 		System.out.println(queryResults);
 		return queryResults;
+	}
+
+	private static OrderDelivers createProjectionOrderDelivers(ResultSet rs) throws SQLException {
+		Integer orderNo = rs.getInt(1);
+		String deliveryMethod = rs.getString("delivery_method");
+		Date startDate = rs.getDate("start_date");
+		Integer deliveryDays = rs.getInt("delivery_days");
+
+		return new OrderDelivers(orderNo, deliveryMethod, null, startDate, deliveryDays, null, null);
 	}
 
 	private static OrderDelivers createOrderDelivers(ResultSet rs) throws SQLException {
