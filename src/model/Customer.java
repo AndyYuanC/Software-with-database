@@ -14,6 +14,15 @@ public class Customer {
 
 	private Date birthDate;
 
+	public Customer(Integer customerId, String name, String phone, String gender, Date birthDate) {
+		super();
+		this.customerId = customerId;
+		this.name = name;
+		this.phone = phone;
+		this.gender = gender;
+		this.birthDate = birthDate;
+	}
+
 	public Integer getCustomerId() {
 		return customerId;
 	}

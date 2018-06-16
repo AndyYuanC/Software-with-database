@@ -12,20 +12,20 @@ public class OrderDelivers {
 
 	private Date startDate;
 
-	private Date dueDate;
+	private Integer deliveryDays;
 
 	private String address;
 
 	private Integer employeeId;
 
-	public OrderDelivers(Integer orderNo, String deliveryMethod, String reciever, Date startDate, Date dueDate,
+	public OrderDelivers(Integer orderNo, String deliveryMethod, String reciever, Date startDate, Integer deliveryDays,
 			String address, Integer employeeId) {
 		super();
 		this.orderNo = orderNo;
 		this.deliveryMethod = deliveryMethod;
 		this.reciever = reciever;
 		this.startDate = startDate;
-		this.dueDate = dueDate;
+		this.deliveryDays = deliveryDays;
 		this.address = address;
 		this.employeeId = employeeId;
 	}
@@ -62,12 +62,12 @@ public class OrderDelivers {
 		this.startDate = startDate;
 	}
 
-	public Date getDueDate() {
-		return dueDate;
+	public Integer getDeliveryDays() {
+		return deliveryDays;
 	}
 
-	public void setDueDate(Date dueDate) {
-		this.dueDate = dueDate;
+	public void setDeliveryDays(Integer deliveryDays) {
+		this.deliveryDays = deliveryDays;
 	}
 
 	public String getAddress() {

@@ -44,7 +44,6 @@ public class AddressSql {
 
 		System.out.println(queryResults);
 		return queryResults;
-
 	}
 
 	private static Address createAddress(ResultSet rs) throws SQLException {
