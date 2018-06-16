@@ -43,7 +43,26 @@ public class CustomerSql {
 			System.out.println("Message: " + e.getMessage());
 		}
 
-		System.out.println(queryResults);
+		return queryResults;
+	}
+
+	public static List<Customer> selectCustomerWithAllAddress() {
+		Connection con = DbConnection.getInstance().getConnection();
+		Statement stmt;
+		List<Customer> queryResults = new ArrayList<>();
+		try {
+			stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM customer c WHERE NOT EXISTS "
+					+ "((SELECT a.unit_no, a.street_name, a.city FROM address a)" + " MINUS "
+					+ "(SELECT l.unit_no, l.street_name, l.city " + "FROM lives l "
+					+ " WHERE l.customer_id = c.customer_id))");
+			while (rs.next()) {
+				queryResults.add(createCustomer(rs));
+			}
+		} catch (SQLException e) {
+			System.out.println("Message: " + e.getMessage());
+		}
+
 		return queryResults;
 	}
 
