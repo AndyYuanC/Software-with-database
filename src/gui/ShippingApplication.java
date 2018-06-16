@@ -3,48 +3,40 @@ package gui;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.sql.Connection;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import app.DbConnection;
+public class ShippingApplication extends JFrame {
 
-public class ShippingApplication extends JFrame{
-
-	private Connection con;
-	
 	private final int width = 1024;
-	
+
 	private final int height = 768;
 
 	public ShippingApplication() {
-		con = DbConnection.getInstance().getConnection();
 		setTitle("UBC Delivery");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		JPanel mainPanel = createMainPanel();
 		add(mainPanel);
-		setSize(new Dimension(width,height));
+		setSize(new Dimension(width, height));
 		setResizable(false);
-		DbConnection.closeConnection();
 	}
-	
 
 	private JPanel createMainPanel() {
 		JPanel mainPanel = new JPanel(new GridLayout(6, 0, 100, 70));
-		
+
 		JLabel customer = new JLabel("Customer");
-		customer.setFont(new Font("Serif", Font.BOLD,50));
+		customer.setFont(new Font("Serif", Font.BOLD, 50));
 		JLabel l1 = new JLabel("");
 		JLabel l2 = new JLabel("");
 		JLabel employee = new JLabel("Employee");
 		JLabel l3 = new JLabel("");
 		JLabel l4 = new JLabel("");
 		JLabel l5 = new JLabel("");
-		employee.setFont(new Font("Serif", Font.BOLD,50));
+		employee.setFont(new Font("Serif", Font.BOLD, 50));
 		JButton query1 = new JButton("Find Order");
 		JButton query2 = new JButton("Find Delivery Man");
 		JButton query3 = new JButton("Delete An Address");
@@ -75,8 +67,7 @@ public class ShippingApplication extends JFrame{
 		mainPanel.add(query9);
 		mainPanel.add(query10);
 		return mainPanel;
-		
-		
+
 	}
 
 	public static void main(String args[]) {
