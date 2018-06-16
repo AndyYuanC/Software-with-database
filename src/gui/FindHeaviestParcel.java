@@ -7,12 +7,12 @@ import javax.swing.JOptionPane;
 
 import app.ParcelOwnsSql;
 
-public class FindLightestParcel implements ActionListener {
+public class FindHeaviestParcel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		Double lightestParcel = ParcelOwnsSql.findMinWeight();
-		JOptionPane.showMessageDialog(null, "The lightest parcel weighs: " + lightestParcel + " kg", "Error",
+		Double heaviestParcel = ParcelOwnsSql.findMaxWeight();
+		JOptionPane.showMessageDialog(null, "The heaviest parcel weighs: " + heaviestParcel + " kg", "Error",
 				JOptionPane.INFORMATION_MESSAGE);
 	}
 
