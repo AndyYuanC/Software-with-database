@@ -22,7 +22,6 @@ public class FindOrder extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		String userEnter = JOptionPane.showInputDialog(null,"Enter The Order #");
 		int orderId = Integer.parseInt(userEnter);
-		System.out.println(orderId+"");
 		List<OrderDelivers> orders = OrderSql.selectOrderFromId(orderId);
 		
 		setLayout(new FlowLayout());

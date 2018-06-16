@@ -56,6 +56,7 @@ public class ShippingApplication extends JFrame{
 		JButton query9 = new JButton("Find Max Date For Specific Delivery Method");
 		JButton query10 = new JButton("Find Customer With All Addresses");
 		query1.addActionListener(new FindOrder());
+		query2.addActionListener(new FindDeliveryMan());
 		mainPanel.add(customer);
 		mainPanel.add(l1);
 		mainPanel.add(l2);
