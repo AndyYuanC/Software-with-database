@@ -14,25 +14,25 @@ import javax.swing.JTable;
 import app.CustomerSql;
 import model.Customer;
 
+@SuppressWarnings("serial")
 public class CustomerWithAllAddress extends JFrame implements ActionListener {
 
-	private static final String[] COLUMN_NAMES = { "Customer ID", "Name", "Phone", "Gender","Birthday"};
-	
+	private static final String[] COLUMN_NAMES = { "Customer ID", "Name", "Phone", "Gender", "Birthday" };
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		List<Customer> customers = CustomerSql.selectCustomerWithAllAddress();
-		
+
 		setLayout(new FlowLayout());
-		
-		if(!customers.isEmpty()) {
+
+		if (!customers.isEmpty()) {
 			String[][] data = new String[customers.size()][5];
-			for(int i = 0; i < customers.size(); i++) {
-				data[i][0] = ""+customers.get(i).getCustomerId();
+			for (int i = 0; i < customers.size(); i++) {
+				data[i][0] = "" + customers.get(i).getCustomerId();
 				data[i][1] = customers.get(i).getName();
 				data[i][2] = customers.get(i).getPhone();
 				data[i][3] = customers.get(i).getGender();
-				data[i][4] = ""+customers.get(i).getBirthDate();
+				data[i][4] = "" + customers.get(i).getBirthDate();
 			}
 			JTable table = new JTable(data, COLUMN_NAMES);
 			table.setPreferredScrollableViewportSize(new Dimension(1024, 768));
@@ -45,7 +45,7 @@ public class CustomerWithAllAddress extends JFrame implements ActionListener {
 			setResizable(false);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			add(scrollPane);
-		}else {
+		} else {
 			JOptionPane.showMessageDialog(null, "There is no customer with all addresses", "Error",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
