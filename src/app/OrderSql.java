@@ -19,15 +19,35 @@ public class OrderSql {
 		PreparedStatement ps;
 		try {
 			String sql = MessageFormat.format(
-					"INSERT INTO order_delivers VALUES ({0,number,#},{1},{2},{3},{4},{5},{6})", order.getOrderNo(),
-					order.getDeliveryMethod(), order.getReciever(), order.getStartDate(), order.getDeliveryDays(),
-					order.getAddress(), order.getEmployeeId());
+					"INSERT INTO order_delivers VALUES ({0,number,#},{1},{2},{3},{4},{5},{6,number,#})",
+					order.getOrderNo(), order.getDeliveryMethod(), order.getReciever(), order.getStartDate(),
+					order.getDeliveryDays(), order.getAddress(), order.getEmployeeId());
 			ps = con.prepareStatement(sql);
 			ps.executeUpdate();
 			ps.close();
 		} catch (SQLException e) {
 			System.out.println("Message: " + e.getMessage());
 		}
+	}
+
+	public static List<OrderDelivers> selectOrderFromId(Integer orderId) {
+		Connection con = DbConnection.getInstance().getConnection();
+		Statement stmt;
+		List<OrderDelivers> queryResults = new ArrayList<>();
+		try {
+			stmt = con.createStatement();
+			String sql = "SELECT *" + " FROM order_delivers "
+					+ MessageFormat.format("WHERE order_no = {0,number,#}", orderId);
+			ResultSet rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				queryResults.add(createOrderDelivers(rs));
+			}
+		} catch (SQLException e) {
+			System.out.println("Message: " + e.getMessage());
+		}
+
+		System.out.println(queryResults);
+		return queryResults;
 	}
 
 	public static List<OrderDelivers> selectAllOrderDelivers() {
