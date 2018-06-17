@@ -29,6 +29,16 @@ public class CustomerSql {
 		}
 	}
 
+	public static void updateCustomerGender(Integer customerId, String newGender) throws SQLException {
+		Connection con = DbConnection.getInstance().getConnection();
+		PreparedStatement ps;
+		String sql = "UPDATE customer SET customer_gender = " + "'" + newGender + "' " + "WHERE customer_id = "
+				+ customerId;
+		ps = con.prepareStatement(sql);
+		ps.executeUpdate();
+		ps.close();
+	}
+
 	public static List<Customer> selectAllcustomer() {
 		Connection con = DbConnection.getInstance().getConnection();
 		Statement stmt;
