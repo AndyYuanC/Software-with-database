@@ -45,7 +45,7 @@ public class ShippingApplication extends JFrame {
 		JButton query4 = new JButton("Update Your Gender");
 		JButton query5 = new JButton("Print All Address");
 		JButton query6 = new JButton("Lightest Parcel");
-		JButton query7 = new JButton("Heviest Parcel");
+		JButton query7 = new JButton("Heaviest Parcel");
 		JButton query8 = new JButton("Find Min Date For Specific Delivery Method");
 		JButton query9 = new JButton("Find Max Date For Specific Delivery Method");
 		JButton query10 = new JButton("Find Customer With All Addresses");
