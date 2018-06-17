@@ -37,6 +37,7 @@ public class ShippingApplication extends JFrame {
 		JLabel l3 = new JLabel("");
 		JLabel l4 = new JLabel("");
 		JLabel l5 = new JLabel("");
+		JLabel l6 = new JLabel("");
 		employee.setFont(new Font("Serif", Font.BOLD, 50));
 
 		JButton query1 = new JButton("Find Order");
@@ -66,18 +67,20 @@ public class ShippingApplication extends JFrame {
 		mainPanel.add(l2);
 		mainPanel.add(query1);
 		mainPanel.add(query2);
-		mainPanel.add(query3);
+		mainPanel.add(l5);
 		mainPanel.add(query4);
 		mainPanel.add(query5);
 		mainPanel.add(l3);
 		mainPanel.add(employee);
 		mainPanel.add(l4);
-		mainPanel.add(l5);
+		mainPanel.add(l6);
+		mainPanel.add(query3);
 		mainPanel.add(query6);
 		mainPanel.add(query7);
 		mainPanel.add(query8);
 		mainPanel.add(query9);
 		mainPanel.add(query10);
+		
 		return mainPanel;
 
 	}

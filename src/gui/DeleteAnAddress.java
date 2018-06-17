@@ -25,6 +25,8 @@ public class DeleteAnAddress implements ActionListener {
 		if (DeleteAddress.DeleteSelectedAddress(UnitNo, StreetName, city) < 1) {
 			JOptionPane.showMessageDialog(null, "Please enter a valid address", "Error",
 					JOptionPane.INFORMATION_MESSAGE);
+		}else {
+			JOptionPane.showMessageDialog(null, "Deleted Successfully, Address: " + UnitNo + " " + StreetName + " " + city);
 		}
 	}
 

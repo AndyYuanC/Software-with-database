@@ -40,7 +40,7 @@ public class CustomerWithAllAddress extends JFrame implements ActionListener {
 
 			JScrollPane scrollPane = new JScrollPane(table);
 			setVisible(true);
-			setTitle("Find Order");
+			setTitle("Customer With All Addresses");
 			setSize(new Dimension(1024, 768));
 			setResizable(false);
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
