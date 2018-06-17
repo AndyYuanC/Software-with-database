@@ -56,6 +56,7 @@ public class ShippingApplication extends JFrame {
 		query6.addActionListener(new FindLightestParcel());
 		query7.addActionListener(new FindHeaviestParcel());
 		query8.addActionListener(new FindMinDate());
+		query9.addActionListener(new FindMaxDate());
 		query10.addActionListener(new CustomerWithAllAddress());
 
 		mainPanel.add(customer);
