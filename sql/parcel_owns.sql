@@ -47,5 +47,10 @@ insert into parcel_owns (weight, volume, description, customer_id) values (94.2,
 insert into parcel_owns (weight, volume, description, customer_id) values (58.561, 32, 'Fundamental 5th generation approach', 47);
 insert into parcel_owns (weight, volume, description, customer_id) values (74.373, 47, 'Realigned intangible core', 48);
 insert into parcel_owns (weight, volume, description, customer_id) values (56.352, 37, 'Mandatory mobile challenge', 49);
-insert into parcel_owns (weight, volume, description, customer_id) values (3.57, 84, 'Right-sized secondary success', 50);
+insert into parcel_owns (weight, volume, description, customer_id) values (9.57, 34, 'Big Blue TV', 50);
+insert into parcel_owns (weight, volume, description, customer_id) values (34.57, 24, 'Big comfy couch', 50);
+insert into parcel_owns (weight, volume, description, customer_id) values (5.57, 14, 'Hockey Stick', 50);
+insert into parcel_owns (weight, volume, description, customer_id) values (8.57, 64, 'Yellow Dog', 50);
+insert into parcel_owns (weight, volume, description, customer_id) values (7.57, 74, 'All toys', 50);
+insert into parcel_owns (weight, volume, description, customer_id) values (6.57, 43, 'Green den', 50);
 commit work;

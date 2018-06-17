@@ -17,5 +17,11 @@ insert into contains (description, customer_id, order_no) values ('Horizontal fu
 insert into contains (description, customer_id, order_no) values ('Programmable bottom-line framework', 17, 017);
 insert into contains (description, customer_id, order_no) values ('Synergistic interactive initiative', 18, 018);
 insert into contains (description, customer_id, order_no) values ('Cross-platform tertiary infrastructure', 19, 019);
-insert into contains (description, customer_id, order_no) values ('Enhanced system-worthy adapter', 20, 020);
+insert into contains (description, customer_id, order_no) values ('Big Blue TV', 50, 020);
+insert into contains (description, customer_id, order_no) values ('Big comfy couch', 50, 21);
+insert into contains (description, customer_id, order_no) values ('Hockey Stick', 50, 22);
+insert into contains (description, customer_id, order_no) values ('Yellow Dog', 50, 23);
+insert into contains (description, customer_id, order_no) values ('All toys', 50, 24);
+insert into contains (description, customer_id, order_no) values ('Green den', 50, 25);
+
 commit work;

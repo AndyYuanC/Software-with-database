@@ -17,5 +17,10 @@ insert into payment_requires (receipt_no, price, payment_date, payment_method, o
 insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (5402, '14.82', '31/08/2017', 'Cash', 17);
 insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (1858, '27.54', '25/09/2017', 'Cash', 18);
 insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (5984, '29.98', '08/03/2018', 'Credit', 19);
-insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (9363, '7.84', '19/07/2017', 'Debit', 20);
+insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (9363, '11.84', '19/07/2017', 'Debit', 20);
+insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (4322, '71.84', '01/09/18', 'Debit', 21);
+insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (6786, '32.84', '16/12/17', 'Debit', 22);
+insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (3463, '9.84', '22/10/17', 'Debit', 23);
+insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (8657, '6.84', '19/12/17', 'Debit', 24);
+insert into payment_requires (receipt_no, price, payment_date, payment_method, order_no) values (3463, '8.84', '08/01/17', 'Debit', 25);
 commit work;
