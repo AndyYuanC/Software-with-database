@@ -45,7 +45,7 @@ public class ShippingApplication extends JFrame {
 		JButton query2 = new JButton("Find Delivery Man");
 		JButton query3 = new JButton("Delete An Address");
 		JButton query4 = new JButton("Update Your Gender");
-		JButton query5 = new JButton("query");
+		JButton query5 = new JButton("Print All Customers");
 		JButton query6 = new JButton("Lightest Parcel");
 		JButton query7 = new JButton("Heviest Parcel");
 		JButton query8 = new JButton("Find Min Date For Specific Delivery Method");
@@ -55,6 +55,7 @@ public class ShippingApplication extends JFrame {
 		query1.addActionListener(new FindOrder());
 		query2.addActionListener(new FindDeliveryMan());
 		query4.addActionListener(new UpdateGender());
+		query5.addActionListener(new PrintAllCustomer());
 		query6.addActionListener(new FindLightestParcel());
 		query7.addActionListener(new FindHeaviestParcel());
 		query8.addActionListener(new FindMinDate());
