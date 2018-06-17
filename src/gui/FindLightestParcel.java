@@ -12,7 +12,7 @@ public class FindLightestParcel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Double lightestParcel = ParcelOwnsSql.findMinWeight();
-		JOptionPane.showMessageDialog(null, "The lightest parcel weighs: " + lightestParcel + " kg", "Error",
+		JOptionPane.showMessageDialog(null, "The lightest parcel weighs: " + lightestParcel + " kg", "Lightest Parcel",
 				JOptionPane.INFORMATION_MESSAGE);
 	}
 

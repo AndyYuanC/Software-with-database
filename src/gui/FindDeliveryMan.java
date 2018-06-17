@@ -19,7 +19,7 @@ public class FindDeliveryMan implements ActionListener {
 		try {
 			orderId = Integer.parseInt(userEnter);
 		} catch (NumberFormatException ex) {
-			JOptionPane.showMessageDialog(null, "Please enter a valid integer", "Error",
+			JOptionPane.showMessageDialog(null, "Please enter a valid integer", "Delivery Man",
 					JOptionPane.INFORMATION_MESSAGE);
 			return;
 		}

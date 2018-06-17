@@ -54,7 +54,7 @@ public class FindOrder extends JFrame implements ActionListener {
 			setTitle("Find Order");
 			setSize(new Dimension(1024, 768));
 			setResizable(false);
-			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			add(scrollPane);
 		} else {
 			JOptionPane.showMessageDialog(null, "Cannot find the Order with this Order#: " + orderId, "Error",
