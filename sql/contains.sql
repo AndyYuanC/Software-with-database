@@ -3,7 +3,7 @@ insert into contains (description, customer_id, order_no) values ('Focused conte
 insert into contains (description, customer_id, order_no) values ('Streamlined client-driven hierarchy', 3, 03);
 insert into contains (description, customer_id, order_no) values ('Visionary transitional solution', 4, 04);
 insert into contains (description, customer_id, order_no) values ('Total bandwidth-monitored policy', 5, 05);
-insert into contains (description, customer_id, order_no) values ('Proactive zero tolerance synergy', 6, 06);
+insert into contains (descriptionion, customer_id, order_no) values ('Proactive zero tolerance synergy', 6, 06);
 insert into contains (description, customer_id, order_no) values ('Cross-group tertiary moratorium', 7, 07);
 insert into contains (description, customer_id, order_no) values ('Secured demand-driven leverage', 8, 08);
 insert into contains (description, customer_id, order_no) values ('Re-contextualized zero administration task-force', 9, 09);
