@@ -22,7 +22,6 @@ public class ParcelOwnsSql {
 			System.out.println("Message: " + e.getMessage());
 		}
 
-		System.out.println(minparcel);
 		return minparcel;
 	}
 
@@ -41,7 +40,6 @@ public class ParcelOwnsSql {
 			System.out.println("Message: " + e.getMessage());
 		}
 
-		System.out.println(maxparcel);
 		return maxparcel;
 	}
 

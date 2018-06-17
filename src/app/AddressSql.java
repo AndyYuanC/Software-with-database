@@ -42,7 +42,6 @@ public class AddressSql {
 			System.out.println("Message: " + e.getMessage());
 		}
 
-		System.out.println(queryResults);
 		return queryResults;
 	}
 

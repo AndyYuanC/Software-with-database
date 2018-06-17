@@ -84,7 +84,6 @@ public class OrderSql {
 			System.out.println("Message: " + e.getMessage());
 		}
 
-		System.out.println(queryResults);
 		return queryResults;
 	}
 
@@ -102,7 +101,6 @@ public class OrderSql {
 			System.out.println("Message: " + e.getMessage());
 		}
 
-		System.out.println(queryResults);
 		return queryResults;
 	}
 

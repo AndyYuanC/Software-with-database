@@ -9,6 +9,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import app.DeleteAddress;
+
 @SuppressWarnings("serial")
 public class ShippingApplication extends JFrame {
 
@@ -81,6 +83,7 @@ public class ShippingApplication extends JFrame {
 	}
 
 	public static void main(String args[]) {
+		DeleteAddress.DeleteSelectedAddress(28964, "Elmside", "Parksville");
 		new ShippingApplication();
 	}
 
