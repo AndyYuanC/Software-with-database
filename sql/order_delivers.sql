@@ -18,4 +18,10 @@ insert into order_delivers (order_no, delivery_method, receiver, start_date, del
 insert into order_delivers (order_no, delivery_method, receiver, start_date, delivery_days, address, employee_id) values (018, 'Standard', 'Meade', '24/09/2017', 18, '598 4th Avenue', 113);
 insert into order_delivers (order_no, delivery_method, receiver, start_date, delivery_days, address, employee_id) values (019, 'Standard', 'Kimberly', '07/03/2018', 23, '033 Jenna Parkway', 121);
 insert into order_delivers (order_no, delivery_method, receiver, start_date, delivery_days, address, employee_id) values (020, 'Standard', 'Natalya', '18/07/2017', 14, '63837 Hoffman Place', 106);
+insert into order_delivers (order_no, delivery_method, receiver, start_date, delivery_days, address, employee_id) values (21, 'Express','Graiden','01/09/18',5,'6428 Enim Avenue', 142);
+insert into order_delivers (order_no, delivery_method, receiver, start_date, delivery_days, address, employee_id) values (22, 'Express','Kirsten','16/12/17',8,'4611 Fermentum Street', 165);
+insert into order_delivers (order_no, delivery_method, receiver, start_date, delivery_days, address, employee_id) values (23, 'Express','Lester','22/10/17',7,'6973 Eros Street', 196);
+insert into order_delivers (order_no, delivery_method, receiver, start_date, delivery_days, address, employee_id) values (24, 'Express','Roary','19/12/17',9,'2904 Phasellus Rd.', 163);
+insert into order_delivers (order_no, delivery_method, receiver, start_date, delivery_days, address, employee_id) values (25, 'Express','Colin','08/01/17',10,'3098 Porttitor St', 142);
+
 commit work;
