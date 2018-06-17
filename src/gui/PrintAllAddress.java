@@ -14,6 +14,7 @@ import javax.swing.JTable;
 import app.AddressSql;
 import model.Address;
 
+@SuppressWarnings("serial")
 public class PrintAllAddress extends JFrame implements ActionListener {
 
 	private static final String[] COLUMN_NAMES = { "Unit_No", "Street_Name", "City", "Province", "Postal_Code",
@@ -43,7 +44,7 @@ public class PrintAllAddress extends JFrame implements ActionListener {
 			setVisible(true);
 			setTitle("All Address in our system");
 			setSize(new Dimension(1044, 768));
-			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			add(scrollPane);
 		} else {
 			JOptionPane.showMessageDialog(null, "There is no address in our system", "Error",

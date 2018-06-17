@@ -14,6 +14,7 @@ import javax.swing.JTable;
 import app.CustomerSql;
 import model.Customer;
 
+@SuppressWarnings("serial")
 public class PrintAllCustomer extends JFrame implements ActionListener {
 
 	private static final String[] COLUMN_NAMES = { "Customer ID", "Name", "Phone", "Gender", "Birthday" };

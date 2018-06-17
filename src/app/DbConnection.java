@@ -17,7 +17,6 @@ public class DbConnection {
 		try {
 			con = DriverManager.getConnection(connectURL, "ora_y2k0b", "a47078150");
 			instance = this;
-			System.out.println("\nConnected to Oracle!");
 		} catch (SQLException ex) {
 			System.out.println("Message: " + ex.getMessage());
 		}
@@ -45,7 +44,6 @@ public class DbConnection {
 		}
 		try {
 			getInstance().getConnection().close();
-			System.out.println("Closing DB connection");
 		} catch (SQLException e) {
 			System.out.println("Message: " + e.getMessage());
 		}
