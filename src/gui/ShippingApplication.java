@@ -54,6 +54,7 @@ public class ShippingApplication extends JFrame {
 
 		query1.addActionListener(new FindOrder());
 		query2.addActionListener(new FindDeliveryMan());
+		query2.addActionListener(new DeleteAnAddress());
 		query4.addActionListener(new UpdateGender());
 		query5.addActionListener(new PrintAllCustomer());
 		query6.addActionListener(new FindLightestParcel());
