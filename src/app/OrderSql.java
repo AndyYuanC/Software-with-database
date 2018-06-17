@@ -14,6 +14,44 @@ import model.OrderDelivers;
 
 public class OrderSql {
 
+	public static int minDaysDeliveryMethod(String method) {
+		Connection con = DbConnection.getInstance().getConnection();
+		Statement stmt;
+		int minDays = 0;
+		try {
+			stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(
+					"SELECT delivery_method, min(delivery_days) FROM order_delivers WHERE lower(delivery_method) = "
+							+ "lower('" + method + "') " + "GROUP BY delivery_method");
+			while (rs.next()) {
+				minDays = rs.getInt(2);
+			}
+		} catch (SQLException e) {
+			System.out.println("Message: " + e.getMessage());
+		}
+
+		return minDays;
+	}
+
+	public static int maxDaysDeliveryMethod(String method) {
+		Connection con = DbConnection.getInstance().getConnection();
+		Statement stmt;
+		int maxDays = 0;
+		try {
+			stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(
+					"SELECT delivery_method, max(delivery_days) FROM order_delivers WHERE lower(delivery_method) = "
+							+ "lower('" + method + "') " + "GROUP BY delivery_method");
+			while (rs.next()) {
+				maxDays = rs.getInt(2);
+			}
+		} catch (SQLException e) {
+			System.out.println("Messagse: " + e.getMessage());
+		}
+
+		return maxDays;
+	}
+
 	public static void insertOrderDelivers(OrderDelivers order) {
 		Connection con = DbConnection.getInstance().getConnection();
 		PreparedStatement ps;
